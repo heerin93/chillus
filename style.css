@@ -1,15 +1,87 @@
 /*GENRERAL */
+:root {
+    --text-presentation-bg-footer: #ebe2d7;
+    --green-text: #7c925e;
+    --bg-header: #fbf9f7;
+    --text-border-header: #6d6d6d;
+}
 *{
     margin: 0;
     padding: 0;
+    font-family: Arial;
+    list-style: none;
+    a {
+      text-decoration: none;  
+    }
 }
 
+/* HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-header);
+    border-bottom: 5px solid var(--text-border-header);
+    .information {
+        background-color: var(--text-presentation-bg-footer);
+        color: var(--green-text);
+        font-size: 18px;
+        text-align: center;
+        height: 40px;
+        align-content: center;
+    }
+    
+}
 
+nav {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    color: var(--text-border-header);    
+}
+.title {
+    color: var(--green-text);
+    font-size: 35px;
+    grid-column: 2;
+    margin-top: 20px;
+}
+.menu {
+    grid-row: 2;
+    grid-column: 2;
+    display: flex;
+}
+.menu li {
+    margin-right: 30px;
+    margin-top: 10px;
+}
+.icon {
+    grid-row: 2;
+    grid-column: 5;
+    display: flex;
+    
+    img {
+        width: 40px;
+        margin-right: 15px;
 
-
-
-
-
-
-
-/* Perrine/ steven*/
+    }
+}
+.container {
+    display: flex;
+    flex-direction: column;
+}
+.present {
+    display: grid;
+    grid-template-columns: 2;
+    background-color: red;
+    .left-side {
+        grid-template-rows: 3;
+    }
+    
+}
+.home-img,.home-text,.home-discover {
+    width: 600px;
+}
+.home-img img{
+    width: 100%;
+}
+.home-text {
+    background-color: var(--text-presentation-bg-footer);
+}
